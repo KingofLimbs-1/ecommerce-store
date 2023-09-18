@@ -1,0 +1,11 @@
+/* FONT-FACE RULES */
+@font-face{
+  font-family: "Nichrome-Regular";
+  src: url("/public/assets/fonts/MDNichromeTest-Regular.otf");
+}
+
+@font-face {
+font-family: "Inter-Regular";
+src: url("/public/assets/fonts/Inter-Regular.otf");
+}
+/* FONT-FACE RULES */
