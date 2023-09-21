@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/public/output.css" />
+    <script src="/scripts/main.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <!-- Navbar end -->
+
+    <!-- Login form -->
+    <div id="loginFormContainer" class="flex justify-center mt-20">
+        <form class="flex flex-col gap-4" action="#">
+            <h1 class="text-center text-6xl font-nichromeFont">Login</h1>
+            <div formItemContainer>
+                <input class="w-22" type="email" placeholder="Email">
+            </div>
+            <div formItemContainer>
+                <input class="w-22" type="password" placeholder="Password">
+            </div>
+            <div formItemContainer>
+                <button type="submit" class="font-medium border-1 py-2 w-full  bg-black text-white transition duration-300 hover:bg-transparent hover:border-black hover:text-gray-900 hover:border-solid border-2 border-transparent">
+                    Login
+                </button>
+            </div>
+            <div id="registerCTA" class="text-center">
+              <span class="font-light">Don't have an account?
+                <a class="font-medium" href="/public/views/register.html">Sign Up</a>
+              </span>
+            </div>
+        </form>
+    </div>
+    <!-- Login form end -->
+  </body>
+</html>
