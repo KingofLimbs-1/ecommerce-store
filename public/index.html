@@ -24,19 +24,22 @@
         <!-- Carousel wrapper -->
         <div class="relative overflow-hidden h-96 text-white">
           <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out h-96" data-carousel-item>
+          <div
+            class="hidden duration-700 ease-in-out h-full"
+            data-carousel-item
+          >
             <img
-              src="/public/assets/images/carousel/m1_banner.png"
+              src="/public/assets/images/carousel/carousel1.png"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
             <div
               class="absolute inset-x-0 bottom-0 p-4 gap-2 flex flex-col justify-center"
             >
-              <span class="text-lg">Monsgeek M1 DIY Kit</span>
+              <span class="text-lg">Monsgeek M1</span>
               <a
                 href="#"
-                class="mt-2 inline-block px-4 py-2 bg-red-600 text-white transition duration-300 hover:bg-transparent hover:border-red-600 hover:border-solid border-2 border-transparent max-w-max"
+                class="font-medium mt-2 inline-block px-4 py-2 bg-red-600 text-white transition duration-300 hover:bg-transparent hover:border-red-600 hover:border-solid border-2 border-transparent max-w-max"
               >
                 View Product
               </a>
@@ -46,7 +49,7 @@
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/public/assets/images/carousel/Keeb2_Carousel.jpg"
+              src="/public/assets/images/carousel/carousel2.jpg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
@@ -66,7 +69,7 @@
           <!-- Item 3 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/public/assets/images/carousel/matcha_switchesCarousel.jpg"
+              src="/public/assets/images/carousel/carousel3.jpg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
@@ -86,7 +89,7 @@
           <!-- Item 4 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/public/assets/images/carousel/lavender_switchesCarousel.jpg"
+              src="/public/assets/images/carousel/carousel4.jpg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
@@ -109,102 +112,90 @@
 
     <!-- Featured Products -->
     <div id="featured-products-container" class="mt-16">
-      <h1 id="heading" class="flex justify-center text-3xl">
+      <h1 id="heading" class="flex justify-center text-3xl my-3">
         Featured Products
       </h1>
       <div
         id="featuredProducts"
-        class="grid justify-items-center gap-2 grid-cols-3 grid-rows-1 mt-5"
+        class="lg:col-span-3 grid justify-items-center grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
       >
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          featuredProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/m1_card.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">Monsgeek M1 DIY Kit</span>
-          <span id="price" class="text-lg">R1900</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            featuredProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          featuredProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/myMelody.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">Akko My Melody 5108S</span>
-          <span id="price" class="text-lg">R1700</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            featuredProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          featuredProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/acr-75pro.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">ACR Pro 75 Kit</span>
-          <span id="price" class="text-lg">R1900</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            featuredProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
       </div>
     </div>
     <!-- Featured products end -->
 
     <!-- Upcoming Products -->
     <div id="upcomingProductsContainer" class="mt-16">
-      <h1 id="heading" class="flex justify-center text-3xl">
+      <h1 id="heading" class="flex justify-center text-3xl my-3">
         Upcoming Products
       </h1>
       <div
         id="upcomingProducts"
-        class="grid justify-items-center gap-2 grid-cols-3 grid-rows-1 mt-5"
+        class="lg:col-span-3 grid justify-items-center grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
       >
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          upcomingProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/m6.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">Monsgeek M6</span>
-          <span id="price" class="text-lg">R2600</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            upcomingProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          upcomingProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/m7w.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">Monsgeek M7</span>
-          <span id="price" class="text-lg">R2400</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            upcomingProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-          upcomingProductCard
-        >
-          <img
-            class="w-auto h-72"
-            src="/public/assets/images/products/creamBlue.png"
-            alt="..."
-          />
-          <span id="name" class="text-xl">Akko V3 Cream Blue Pro Switches</span>
-          <span id="price" class="text-lg">R350</span>
-        </div>
+        <a href="#">
+          <div
+            class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
+            upcomingProductCard
+          >
+            <img class="w-auto h-72" src="" alt="..." />
+            <span id="name" class="text-xl">Product</span>
+            <span id="price" class="text-lg italic">Price</span>
+          </div>
+        </a>
       </div>
     </div>
     <!-- Upcoming products end -->
