@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom config */
+.text-6xl {
+  font-size: 3.5rem;
+}
+
+.gap-5 {
+  gap: 1.5rem;
+}
+
+.h-5 {
+  height: 3rem;
+}
+
+.w-6 {
+  width: 3rem;
+}
+.w-22 {
+  width: 22rem;
+}
+
+.px-6 {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
+.mt-20 {
+  margin-top: 8rem;
+}
+
+.hover\:border-black:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0, 0, 0 / var(--tw-border-opacity));
+}
+/* ... */
