@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.{html,js}"],
+  content: [
+    "./public/*.{html,js}",
+    "./public/views/*.{html,js}",
+    "./components/*.{html,js}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     fontFamily: {
       nichromeFont: ["Nichrome-Regular", "sans"],
@@ -8,5 +13,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/forms")]
 };
