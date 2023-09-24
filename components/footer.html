@@ -6,24 +6,46 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/fonts.css" />
     <link rel="stylesheet" href="/public/output.css" />
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
   </head>
   <body>
-    <footer class="bg-black text-white font-nichromeFont flex justify-center text-2xl">
-      <div id="footerContainer" class="flex-col text-center flex gap-4 m-2">
-        <div id="footerItems" class="">
-          <span>Umbrella Keys</span>
+    <footer class="bg-black shadow mt-3 w-full bottom-0">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="/public/index.html" class="flex items-center mb-4 sm:mb-0">
+            <img
+              src="/public/assets/images/favicon.png"
+              class="w-12 h-auto mb-2"
+              alt="..."
+            />
+            <span
+              class="self-center text-2xl text-white font-nichromeFont whitespace-nowrap"
+              >Umbrella Keys</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-lg font-large font-interFont text-white sm:mb-0 underline"
+          >
+            <li>
+              <a
+                href="/public/views/about.html"
+                class="mr-4 hover:underline md:mr-6"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="/public/views/contact.html" class="hover:underline"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-        <div id="redirectionContainer" class="underline underline-offset-1">
-          <div id="footerItems" class="flex gap-6">
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-            <a href="#">Follow Us</a>
-          </div>
-        </div>
-        <div id="footerItems" class="text-sm">
-            <span>©</span>
-            <span>Umbrella Keys</span>
-        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white sm:text-center"
+          >©
+          <a href="/public/index.html" class="hover:underline">Umbrella Keys™</a
+          >. All Rights Reserved.</span
+        >
       </div>
     </footer>
   </body>
