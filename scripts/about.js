@@ -2,23 +2,23 @@
 let teamMembers = [
   {
     name: "Emma Van der Merwe",
-    role: "Founder",
+    role: "CEO/Founder",
     img: "/public/assets/images/team/member1.jpg",
   },
   {
     name: "Thandiwe Dlamini",
-    role: "Head of Marketing",
-    img: "/public/assets/images/team/member3.jpg",
+    role: "CTO/Lead Software Engineer",
+    img: "/public/assets/images/team/tesetMember2.jpg",
   },
   {
     name: "Daniel Fourie",
-    role: "Head of Advertising",
-    img: "/public/assets/images/team/member2.jfif",
+    role: "Head of Marketing",
+    img: "/public/assets/images/team/tesetMember3.jpg",
   },
   {
     name: "Sibusiso Ngubane",
     role: "Head of Sales",
-    img: "/public/assets/images/team/member4.jpg",
+    img: "/public/assets/images/team/testMember4.jpg",
   },
 ];
 // ...
@@ -31,9 +31,9 @@ let populateTeamContainer = () => {
     teamMembers.forEach((member) => {
       teamUl.innerHTML += `
        <li>
-        <div class="flex items-center gap-x-6">
+        <div class="flex items-center gap-x-8">
         <img
-        class="h-16 w-16 rounded-full"
+        class="rounded-full h-14 w-14 object-cover"
         src="${member["img"]}"
         alt=""
         />
