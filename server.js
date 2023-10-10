@@ -40,6 +40,26 @@ let fetchProducts = (url, productType) => {
     }
   });
 };
+
+// All products from 'Products🎱' table
+let fetchAllProducts = () => {
+  app.get("/api/all-products", async (req, res) => {
+    try {
+      // Fetch all product data from the database
+      const { data, error } = await supabase.from("Products🎱").select("*");
+
+      if (error) {
+        throw new Error("Error fetching product data");
+      }
+
+      // Send JSON response with all product data
+      res.json(data);
+    } catch (err) {
+      // Handle errors with a basic error response
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+};
 // ...
 
 // Asynchronous function that fetches necessary data from DB and then starts server
@@ -50,6 +70,7 @@ async function startServer() {
       fetchProducts("keyboards", "Keyboard"),
       fetchProducts("keycaps", "Keycap"),
       fetchProducts("switches", "Switch"),
+      fetchAllProducts()
     ]);
 
     // Log if fetching is successful
