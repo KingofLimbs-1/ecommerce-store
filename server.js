@@ -18,7 +18,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // API route definitions
 
-// 'Products🎱' table
+// Fetch from 'Products🎱' table with product filters
+// Used to display product data in category-specific shop pages
 let fetchProducts = (url, productType) => {
   app.get(`/api/${url}`, async (req, res) => {
     try {
@@ -42,6 +43,7 @@ let fetchProducts = (url, productType) => {
 };
 
 // All products from 'Products🎱' table
+// Used to display all product images in lookbook markup
 let fetchAllProducts = () => {
   app.get("/api/all-products", async (req, res) => {
     try {
@@ -62,6 +64,58 @@ let fetchAllProducts = () => {
 };
 // ...
 
+// Fetch product images based on product_id
+let fetchProductImages = () => {
+  app.get("/api/product-images/:productId", async (req, res) => {
+    try {
+      const productId = req.params.productId;
+
+      // Fetch associated images for the product by product ID
+      const { data: imageData, error: imageError } = await supabase
+        .from("Product Images📷")
+        .select("image_path")
+        .eq("product_id", productId);
+
+      if (imageError) {
+        throw new Error("Error fetching product images");
+      }
+
+      // Send JSON response with the product images
+      res.json(imageData);
+    } catch (err) {
+      // Handle errors with a basic error response
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+};
+// ...
+
+// Fetch product data based on product_id
+let fetchProductDataWithID = () => {
+  app.get("/api/product-data/:productId", async (req, res) => {
+    try {
+      const productId = req.params.productId;
+
+      // Fetch associated images for the product by product ID
+      const { data, error } = await supabase
+        .from("Products🎱")
+        .select("*")
+        .eq("product_id", productId);
+
+      if (error) {
+        throw new Error("Error fetching product data");
+      }
+
+      // Send JSON response with the product images
+      res.json(data);
+    } catch (err) {
+      // Handle errors with a basic error response
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+};
+// ...
+
 // Asynchronous function that fetches necessary data from DB and then starts server
 async function startServer() {
   try {
@@ -70,7 +124,9 @@ async function startServer() {
       fetchProducts("keyboards", "Keyboard"),
       fetchProducts("keycaps", "Keycap"),
       fetchProducts("switches", "Switch"),
-      fetchAllProducts()
+      fetchAllProducts(),
+      fetchProductImages(),
+      fetchProductDataWithID(),
     ]);
 
     // Log if fetching is successful
