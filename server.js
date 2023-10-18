@@ -121,9 +121,9 @@ async function startServer() {
   try {
     // multiple fetchProducts calls and await them
     await Promise.all([
-      fetchProducts("keyboards", "Keyboard"),
-      fetchProducts("keycaps", "Keycap"),
-      fetchProducts("switches", "Switch"),
+      fetchProducts("keyboards", "Keyboards"),
+      fetchProducts("keycaps", "Keycaps"),
+      fetchProducts("switches", "Switches"),
       fetchAllProducts(),
       fetchProductImages(),
       fetchProductDataWithID(),
