@@ -159,7 +159,7 @@
                 </div>
 
                 <div
-                  class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  class="hidden absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
@@ -309,23 +309,12 @@
 
               <!-- Product grid -->
               <div
-                class="lg:col-span-3 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
-              >
-                <div
-                  class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white drop-shadow-md lg:aspect-none group-hover:opacity-75 lg:h-full"
-                >
-                  <a href="#">
-                    <div>
-                      <img class="w-auto h-auto" src="" alt="..." />
-                      <div id="infoContainer" class="text-center flex flex-col">
-                        <span id="name" class="text-xl">Product Name</span>
-                        <span id="price" class="text-lg">Price</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              class="productContainer lg:col-span-3 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
+            >
+              <!-- Script will handle product card data population... -->
               </div>
-              <!-- Product grid end -->
+            </div>
+            <!-- Product grid end -->
             </div>
           </section>
         </main>
@@ -333,5 +322,6 @@
     </div>
 
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/keycaps.js"></script>
   </body>
 </html>
