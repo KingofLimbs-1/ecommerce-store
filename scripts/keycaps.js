@@ -1,3 +1,27 @@
+// Display product data
+let displayProducts = (data) => {
+  const productContainer = document.querySelector(".productContainer");
+  data.forEach((product) => {
+    productContainer.innerHTML += `<div
+  class="productCard aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white drop-shadow-md lg:aspect-none group-hover:opacity-75 lg:h-full"
+>
+  <a href="/public/views/product.html?id=${product["product_id"]}">
+    <div>
+      <img
+        class="w-auto h-auto"
+        src="${product["thumbnail"]}"
+        alt="..."
+      />
+      <div id="infoContainer" class="text-center flex flex-col p-2">
+        <span id="name" class="text-xl">${product["name"]}</span>
+        <span id="price" class="text-lg">R${product["price"]}</span>
+      </div>
+    </div>
+  </a>`;
+  });
+};
+// ...
+
 // GET request for '/api/keycaps' endpoint
 fetch("http://localhost:3000/api/keycaps")
   .then((response) => {
@@ -9,8 +33,8 @@ fetch("http://localhost:3000/api/keycaps")
     return response.json();
   })
   .then((data) => {
-    // Interact with product data
-    console.log(data);
+    // Display products functionality
+    displayProducts(data);
     // ...
   })
   .catch((error) => {
