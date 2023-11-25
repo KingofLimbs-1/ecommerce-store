@@ -1,24 +1,24 @@
 // Team members object
 let teamMembers = [
   {
-    name: "Emma Van der Merwe",
+    name: "Jason Van der Merwe",
     role: "CEO/Founder",
     img: "/public/assets/images/team/member1.jpg",
   },
   {
     name: "Thandiwe Dlamini",
     role: "CTO/Lead Software Engineer",
-    img: "/public/assets/images/team/tesetMember2.jpg",
+    img: "/public/assets/images/team/member2.jpg",
   },
   {
     name: "Daniel Fourie",
     role: "Head of Marketing",
-    img: "/public/assets/images/team/tesetMember3.jpg",
+    img: "/public/assets/images/team/member3.jpg",
   },
   {
     name: "Sibusiso Ngubane",
     role: "Head of Sales",
-    img: "/public/assets/images/team/testMember4.jpg",
+    img: "/public/assets/images/team/member4.jpg",
   },
 ];
 // ...
@@ -33,7 +33,7 @@ let populateTeamContainer = () => {
        <li>
         <div class="flex items-center gap-x-8">
         <img
-        class="rounded-full h-14 w-14 object-cover"
+        class="h-16 w-16 rounded-full"
         src="${member["img"]}"
         alt=""
         />
@@ -57,4 +57,4 @@ let populateTeamContainer = () => {
 };
 
 populateTeamContainer();
-// ...
+// ...  
