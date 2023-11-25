@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./output.css" />
     <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/index.js"></script>
   </head>
   <body>
     <!-- Footer -->
@@ -15,26 +16,29 @@
     <!-- Footer end -->
 
     <!-- Hero Banner -->
-    <div id="heroContainer" class="font-interFont">
+    <div
+      id="heroContainer"
+      class="font-interFont h-screen w-screen sm:h-[80vh] lg:h-[90vh]"
+    >
       <div
         id="default-carousel"
         class="relative w-full h-full"
         data-carousel="slide"
       >
         <!-- Carousel wrapper -->
-        <div class="relative overflow-hidden h-96 text-white">
+        <div class="relative overflow-hidden h-full text-white">
           <!-- Item 1 -->
           <div
-            class="hidden duration-700 ease-in-out h-full"
+            class="hidden duration-700 ease-in-out h-full w-full"
             data-carousel-item
           >
             <img
               src="/public/assets/images/carousel/carousel1.png"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              class="absolute block object-cover w-full h-full top-0 left-0"
               alt="..."
             />
             <div
-              class="absolute inset-x-0 bottom-0 p-4 gap-2 flex flex-col justify-center"
+              class="absolute inset-x-0 bottom-0 p-4 mb-5 gap-2 flex flex-col justify-center"
             >
               <span class="text-lg">Monsgeek M1</span>
               <a
@@ -47,14 +51,17 @@
           </div>
 
           <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="hidden duration-700 ease-in-out h-full w-full"
+            data-carousel-item
+          >
             <img
               src="/public/assets/images/carousel/carousel2.jpg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              class="absolute block object-cover w-full h-full top-0 left-0"
               alt="..."
             />
             <div
-              class="absolute inset-x-0 bottom-0 p-4 gap-2 flex flex-col justify-center"
+              class="absolute inset-x-0 bottom-0 p-4 mb-5 gap-2 flex flex-col justify-center"
             >
               <span class="text-lg">Akko Dracula Castle 5075B Plus</span>
               <a
@@ -67,16 +74,19 @@
           </div>
 
           <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="hidden duration-700 ease-in-out h-full w-full"
+            data-carousel-item
+          >
             <img
               src="/public/assets/images/carousel/carousel3.jpg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              class="absolute block object-cover w-full h-full top-0 left-0"
               alt="..."
             />
             <div
-              class="absolute inset-x-0 bottom-0 p-4 gap-2 flex flex-col justify-center"
+              class="absolute inset-x-0 bottom-0 p-4 mb-5 gap-2 flex flex-col justify-center"
             >
-              <span class="text-lg">Akko V3 Matcha Green Pro Switches</span>
+              <span class="text-lg">Akko V3 Lavender Purple Pro Switches</span>
               <a
                 href="#"
                 class="mt-2 inline-block px-4 py-2 bg-red-600 text-white transition duration-300 hover:bg-transparent hover:border-red-600 hover:border-solid border-2 border-transparent max-w-max"
@@ -87,16 +97,19 @@
           </div>
 
           <!-- Item 4 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="hidden duration-700 ease-in-out h-full w-full"
+            data-carousel-item
+          >
             <img
               src="/public/assets/images/carousel/carousel4.jpg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              class="absolute block object-cover w-full h-full top-0 left-0"
               alt="..."
             />
             <div
-              class="absolute inset-x-0 bottom-0 p-4 text-white gap-2 flex flex-col justify-center"
+              class="absolute inset-x-0 bottom-0 p-4 mb-5 text-white gap-2 flex flex-col justify-center"
             >
-              <span class="text-lg">Akko V3 Lavender Purple Pro Switches</span>
+              <span class="text-lg">Akko V3 Matcha Green Switches</span>
               <a
                 href="#"
                 class="mt-2 inline-block px-4 py-2 bg-red-600 text-white transition duration-300 hover:bg-transparent hover:border-red-600 hover:border-solid border-2 border-transparent max-w-max"
@@ -112,7 +125,7 @@
 
     <div class="py-3 px-3">
       <!-- Featured Products -->
-      <div id="featured-products-container" class="mt-16">
+      <div id="featured-products-container" class="p-6">
         <h1 id="heading" class="flex justify-center text-3xl my-3">
           Featured Products
         </h1>
@@ -120,44 +133,13 @@
           id="featuredProducts"
           class="lg:col-span-3 grid justify-items-center grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
         >
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              featuredProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
-
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              featuredProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
-
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              featuredProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
+          <!-- Script will handle featured products data generation... -->
         </div>
       </div>
       <!-- Featured products end -->
 
       <!-- Upcoming Products -->
-      <div id="upcomingProductsContainer" class="mt-16">
+      <div id="upcomingProductsContainer" class="p-6">
         <h1 id="heading" class="flex justify-center text-3xl my-3">
           Upcoming Products
         </h1>
@@ -165,38 +147,7 @@
           id="upcomingProducts"
           class="lg:col-span-3 grid justify-items-center grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
         >
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              upcomingProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
-
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              upcomingProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
-
-          <a href="#">
-            <div
-              class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
-              upcomingProductCard
-            >
-              <img class="w-auto h-auto" src="" alt="..." />
-              <span id="name" class="text-xl">Product</span>
-              <span id="price" class="text-lg italic">Price</span>
-            </div>
-          </a>
+          <!-- Script will handle upcoming products data generation... -->
         </div>
       </div>
       <!-- Upcoming products end -->
