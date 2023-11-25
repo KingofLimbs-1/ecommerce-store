@@ -10,7 +10,7 @@ fetch("http://localhost:3000/api/all-products")
     let lookBookContainer = document.querySelector("#lookBookContainer");
     console.log(lookBookContainer);
     data.forEach((product) => {
-      lookBookContainer.innerHTML += `<a href="#">
+      lookBookContainer.innerHTML += `<a href="/public/views/product.html?id=${product["product_id"]}">
         <div
           class="flex flex-col items-center rounded drop-shadow-md bg-white w-80 h-auto p-2"
           lookBookCard

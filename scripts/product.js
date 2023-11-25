@@ -6,8 +6,6 @@ const productId = urlParams.get("id");
 // Display product images using product_id
 let displayProductImagesWithID = (imageData) => {
   let parentImagesContainer = document.querySelector(".imagesContainer");
-  let imagesContainer = document.createElement("div");
-  parentImagesContainer.appendChild(imagesContainer);
 
   imageData.forEach((imagePath) => {
     // Create an image element for each image path
@@ -28,8 +26,8 @@ let displayProductImagesWithID = (imageData) => {
     );
     imageDiv.appendChild(imageElement);
 
-    // Append the image container to the imagesContainer
-    imagesContainer.appendChild(imageDiv);
+    // Append image div to the parent container
+    parentImagesContainer.appendChild(imageDiv);
   });
 };
 // ...
@@ -47,7 +45,7 @@ let displayProductDataWithID = (productData) => {
     // ...
     productInfoContainer.innerHTML += `
     <div
-              class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16"
+              class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16 mt-10"
             >
               <div
                 id="product-name"
@@ -154,7 +152,7 @@ let displayProductDataWithID = (productData) => {
               </div>
 
               <div
-                class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6"
+                class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6 mb-5"
               >
                 <!-- Description -->
                 <div id="description-container">
@@ -168,12 +166,12 @@ let displayProductDataWithID = (productData) => {
 
                 <!-- Specifications -->
                 <div id="specifications-container" class="mt-10">
-                  <h3 class="text-sm font-medium text-gray-900">
+                  <h3 class="text-md font-medium text-gray-500">
                     Specifications
                   </h3>
 
                   <div class="mt-4">
-                    <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                    <ul role="list" class="list-disc space-y-2 text-lg">
                     ${specificationsArray
                       .map(
                         (specification) => `<li>${specification.trim()}</li>`
@@ -186,10 +184,10 @@ let displayProductDataWithID = (productData) => {
 
                 <!-- Included -->
                 <div id="included-container" class="mt-10">
-                  <h2 class="text-sm font-medium text-gray-900">Included</h2>
+                  <h2 class="text-md font-medium text-gray-500">Included</h2>
 
                   <div class="mt-4 space-y-6">
-                  <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                  <ul role="list" class="list-disc space-y-2 text-lg">
                   ${includedArray
                     .map((included) => `<li>${included.trim()}</li>`)
                     .join("")} 
@@ -200,12 +198,12 @@ let displayProductDataWithID = (productData) => {
 
                 <!-- Compatibility -->
                 <div id="compatibility-container" class="mt-10">
-                  <h2 class="text-sm font-medium text-gray-900">
+                  <h2 class="text-md font-medium text-gray-500">
                     Compatibility
                   </h2>
 
                   <div class="mt-4 space-y-6">
-                  <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                  <ul role="list" class="list-disc space-y-2 text-lg">
                   ${compatibilityArray
                     .map((compatibility) => `<li>${compatibility.trim()}</li>`)
                     .join("")} 
@@ -223,8 +221,8 @@ let displayProductDataWithID = (productData) => {
   >
     <li>
       <div class="flex items-center">
-        <a href="/public/views/${product["type"]}s.html" class="mr-2 text-sm font-medium text-gray-900"
-          >${product["type"]}s</a
+        <a href="/public/views/${product["type"]}.html" class="mr-2 text-sm font-medium text-gray-900"
+          >${product["type"]}</a
         >
         <svg
           width="16"
@@ -248,7 +246,6 @@ let displayProductDataWithID = (productData) => {
         class="productNameFilter font-medium text-black hover:text-gray-600"
         >${product["name"]}</a
       >
-      <!-- Product names will be generated dynamically using script... -->
     </li>
   </ol>
   `;
