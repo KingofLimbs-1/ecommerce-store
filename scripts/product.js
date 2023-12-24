@@ -19,7 +19,6 @@ let displayProductImagesWithID = (imageData) => {
     imageDiv.classList.add(
       "aspect-h-4",
       "aspect-w-3",
-      "hidden",
       "overflow-hidden",
       "rounded-lg",
       "lg:block"
